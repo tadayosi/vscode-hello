@@ -6,6 +6,10 @@
   "publisher": "tadayosi",
   "author": "Tadayoshi Sato",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tadayosi/vscode-hello"
+  },
   "engines": {
     "vscode": "^1.70.0"
   },
