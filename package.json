@@ -1,8 +1,11 @@
 {
   "name": "vscode-hello",
   "displayName": "vscode-hello",
-  "description": "",
+  "description": "VS Code sample extension",
   "version": "0.0.1",
+  "publisher": "tadayosi",
+  "author": "Tadayoshi Sato",
+  "license": "Apache-2.0",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -10,14 +13,27 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vscode-hello.helloWorld"
+    "onLanguage:makefile",
+    "onCommand:vscode-hello.hello"
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "languages": [
+      {
+        "id": "makefile",
+        "aliases": [
+          "Makefile",
+          "makefile"
+        ],
+        "extensions": [
+          "Makefile"
+        ]
+      }
+    ],
     "commands": [
       {
-        "command": "vscode-hello.helloWorld",
-        "title": "Hello World"
+        "command": "vscode-hello.hello",
+        "title": "Hello"
       }
     ]
   },
